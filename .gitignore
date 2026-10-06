@@ -1,0 +1,44 @@
+## `.gitignore`
+
+```gitignore
+# The Journey
+
+# Private reflections
+private/
+personal/
+private-notes/
+
+# Sensitive information
+.env
+.env.*
+credentials/
+secrets/
+*.key
+*.pem
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+~$*
+
+# Generated files
+build/
+dist/
+out/
+tmp/
+temp/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
