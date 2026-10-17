@@ -43,3 +43,25 @@ To read a push button (digital input) with a microcontroller like an Arduino, yo
 • State Control: It allows the microcontroller to safely toggle between different states (e.g., ON vs. OFF) based on external real-world physical actions.
 • Signal Stability: By correctly implementation of pull-up/pull-down resistors, the project demonstrates how to eliminate electrical noise ("floating pins") to achieve predictable, stable digital signals.
 • Foundational Architecture: It introduces the core structure of embedded software loops—continuously polling (checking) an input pin and making immediate decisions based on its logical state (HIGH or LOW).
+
+                    WEEK 3
+        Project
+    Light meter(Analog inputs)
+Analog light meter uses a light-dependent resistor (LDR) or photodiode to measure ambient light levels through an analog input pin, converting variable voltage into readable digital data. 
+
+Key Concepts
+• Analog Signals vs. Digital Data: Light intensity is continuous (analog). The Arduino uses its built-in 10-bit Analog-to-Digital Converter (ADC) to map this varying voltage into a digital integer range from 0 to 1023.
+• Voltage Divider Circuit: An LDR changes its resistance based on light, but the Arduino measures voltage, not resistance. Placing the LDR in series with a fixed resistor (usually 10kΩ) creates a voltage divider that translates resistance changes into measurable voltage changes.
+• Mapping and Calibration: The raw ADC values (0–1023) can be mathematically mapped using software functions to represent approximate real-world units like Lux or simple percentage scales.
+
+Basic Implementation
+Connect a standard LDR and a 10kΩ resistor to the Arduino as follows:
+• 5V → One leg of the LDR
+• Analog Pin A0 → The junction where the LDR meets the 10kΩ resistor
+• GND → The remaining free leg of the 10kΩ resistor.
+
+ Step-by-Step Breakdown
+1. Voltage Calculation: The analogRead() function turns voltages between 0V and 5V into a number from 0 to 1023. Multiplying by (5.0 / 1023.0) converts this raw number back into a readable voltage level.
+2. Voltage Divider Logic: The LDR changes its resistance based on light. In this setup, more light lowers the LDR's resistance, raising the voltage at pin A1. Less light lowers the voltage.
+3. Threshold Categorization: An if-else structure checks the LDR raw value against predefined limits (300 and 700) to classify the room light condition. You can change these numbers to match your specific room lighting.
+4. Frequency Mapping: The map() function converts your light reading into a timing interval. By mapping 0-1023 to 1000-50, low light generates a long 1-second pause between beeps, while bright light causes rapid-fire beeps every 50 milliseconds.
