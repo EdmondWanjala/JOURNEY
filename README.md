@@ -65,3 +65,22 @@ Connect a standard LDR and a 10kΩ resistor to the Arduino as follows:
 2. Voltage Divider Logic: The LDR changes its resistance based on light. In this setup, more light lowers the LDR's resistance, raising the voltage at pin A1. Less light lowers the voltage.
 3. Threshold Categorization: An if-else structure checks the LDR raw value against predefined limits (300 and 700) to classify the room light condition. You can change these numbers to match your specific room lighting.
 4. Frequency Mapping: The map() function converts your light reading into a timing interval. By mapping 0-1023 to 1000-50, low light generates a long 1-second pause between beeps, while bright light causes rapid-fire beeps every 50 milliseconds.
+
+                    WEEK 5
+        Project
+    Sun tracking servo(Pulse width modulation)
+Pulse Width Modulation (PWM) is a technique that uses digital signals to control analog power delivery. Instead of varying voltage continuously (which wastes energy as heat), a PWM device rapidly switches a signal completely ON and completely OFF. By changing how long the signal stays "on" versus "off" within each cycle, it regulates the average power or voltage sent to a load.
+
+Key Concepts;
+• Duty Cycle: The percentage of time a digital signal remains ON (high) during a single period (T).
+• Frequency: The speed at which the on-off cycle repeats, measured in Hertz (Hz). High switching frequencies (typically 1 kHz to 200 kHz) ensure that the load (such as a motor or LED) responds to the average voltage rather than flickering or stuttering.
+• Period (T): The total duration of one complete on-and-off cycle, which is the mathematical inverse of frequency (1 / Frequency).
+• Average Voltage Calculation: Average Voltage = Duty Cycle × Peak Voltage.
+
+Common Applications;
+• Motor Speed Control: Regulates the speed of DC and AC motors by controlling current without losing high torque at low speeds.
+• LED Dimming & RGB Color Mixing: Adjusts the perceived brightness of lights or blends colors in RGB LEDs by cycling the power faster than the human eye can track.
+• Audio Amplification (Class D Amplifiers): Reconstructs sound signals with high efficiency (often exceeding 90%) by amplifying high-frequency PWM waves.
+• Switching Mode Power Supplies (SMPS) & Voltage Regulation: Converts and stabilizes DC voltages with minimal energy loss compared to linear regulators.
+• Servo Motor Positioning: Controls the physical angle of hobby and industrial servos (such as 0° to 180°) using specific pulse-width durations (commonly on a 50 Hz frame).
+• Solar Maximum Power Point Tracking (MPPT): Optimizes energy extraction from solar photovoltaic panels.
