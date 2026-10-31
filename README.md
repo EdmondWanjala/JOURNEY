@@ -84,3 +84,35 @@ Common Applications;
 • Switching Mode Power Supplies (SMPS) & Voltage Regulation: Converts and stabilizes DC voltages with minimal energy loss compared to linear regulators.
 • Servo Motor Positioning: Controls the physical angle of hobby and industrial servos (such as 0° to 180°) using specific pulse-width durations (commonly on a 50 Hz frame).
 • Solar Maximum Power Point Tracking (MPPT): Optimizes energy extraction from solar photovoltaic panels.
+
+                    WEEK 5
+        Project
+    DHT11 temperature + humidity logger(Serial communication)
+Serial communication is a method of sending data sequentially, one bit at a time, over a communication channel or physical wire. 
+This contrasts with parallel communication, which sends multiple bits simultaneously across several separate lines.
+
+Key Concepts;
+ Directional Transmission Modes
+• Simplex: Data flows in one direction only (from sender to receiver), like a radio broadcast.
+• Half-Duplex: Data flows in both directions, but only one way at a time (the line must switch between sending and receiving), like a walkie-talkie.
+• Full-Duplex: Data flows in both directions simultaneously using separate send and receive lines, like a telephone call.
+ Synchronization Methods
+• Asynchronous Communication: Data is sent in independent frames or packets without a shared clock line. Timing relies on a pre-agreed speed (the baud rate) and uses start, data, optional parity, and stop bits to mark the boundaries of each character.
+• Synchronous Communication: Data is streamed continuously alongside a shared clock signal or embedded clock pulse so the receiver stays locked in step with the transmitter without needing start/stop bits.
+ Common Standards & Protocols
+• UART (Universal Asynchronous Receiver-Transmitter): A hardware interface managing point-to-point asynchronous serial communication (typically using TX, RX, and GND lines).
+• RS-232: A legacy standard designed for short-distance, point-to-point connections (up to about 15 meters) commonly used between computers and modems.
+• RS-485: An industrial standard supporting long distances (up to 1,200 meters) and multi-point networks using differential signaling to resist electrical noise.
+• Low-Speed IC/Embedded Buses: Protocols like SPI (Serial Peripheral Interface) and I²C (Inter-Integrated Circuit) used for chip-to-chip communication on circuit boards.
+• High-Speed Serial: Modern high-throughput interfaces like USB, SATA, PCIe, Ethernet, and HDMI that serialize data at gigabit speeds using differential pairs and advanced modulation.
+
+Advantages;
+• Fewer Wires and Pins: Requires significantly fewer physical conductors and integrated circuit pins than parallel buses.
+• Longer Distance: Avoids clock-skew issues found in high-speed parallel lines, allowing data to travel much farther (up to 1,200+ meters for RS-485 vs. ~20 meters for parallel interfaces).
+• Lower Cost & Reduced Crosstalk: Fewer parallel traces mean less electromagnetic interference (crosstalk) and lower cable costs.
+
+Applications;
+• Industrial Automation & Control: Connecting Programmable Logic Controllers (PLCs) to Variable Frequency Drives (VFDs), sensors, and factory machinery via RS-485 or PROFIBUS.
+• Embedded Systems & Microcontrollers: Communicating between Arduino/ARM chips and GPS modules, Bluetooth adapters, displays, or sensors using UART, SPI, or I²C.
+• Computer Peripherals & Storage: Connecting external and internal devices via USB, SATA, and PCIe.
+• Networking & Telecommunications: High-speed data transport across Ethernet links and fiber-optic serial channels.           
