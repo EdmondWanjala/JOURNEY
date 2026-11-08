@@ -115,4 +115,28 @@ Applications;
 • Industrial Automation & Control: Connecting Programmable Logic Controllers (PLCs) to Variable Frequency Drives (VFDs), sensors, and factory machinery via RS-485 or PROFIBUS.
 • Embedded Systems & Microcontrollers: Communicating between Arduino/ARM chips and GPS modules, Bluetooth adapters, displays, or sensors using UART, SPI, or I²C.
 • Computer Peripherals & Storage: Connecting external and internal devices via USB, SATA, and PCIe.
-• Networking & Telecommunications: High-speed data transport across Ethernet links and fiber-optic serial channels.           
+• Networking & Telecommunications: High-speed data transport across Ethernet links and fiber-optic serial channels.  
+
+                    WEEK 6
+        Project
+    Live weather station v1(LCD Display)
+A Liquid Crystal Display (LCD) is a flat-panel, non-emissive display technology that modulates ambient light or a dedicated backlight using liquid crystals sandwiched between polarizing filters. 
+Because liquid crystals do not emit light on their own, LCDs rely on an external light source—such as an LED backlight or a reflective surface—to create visible text, digits, or full-color images.
+
+Key Concepts & Working Principles
+• Liquid Crystals: States of matter combining properties of conventional liquids and crystalline solids; their molecular orientation twists or realigns when exposed to an electric field.
+• Polarizing Filters: Two perpendicular polarizers (front and back) control the plane of light passing through the panel; aligned or twisted crystals allow light through, while realigned crystals block it.
+• Backlighting & Subpixels: Modern color LCDs use an LED backlight unit shining through Red, Green, and Blue (RGB) color filters to produce a full spectrum of colors.
+• Matrix Addressing:
+	• Passive-Matrix: Rows and columns are scanned directly (common in low-cost monochrome or simple character screens like 16x2 I²C modules).
+	• Active-Matrix (TFT): Uses a Thin-Film Transistor at every individual sub-pixel for rapid response times and high-resolution color.
+• Panel Types:
+	• TN (Twisted Nematic): Fastest response times, lowest cost, and narrowest viewing angles.
+	• VA (Vertical Alignment): High contrast ratios and wider viewing angles than TN.
+	• IPS (In-Plane Switching): Widest viewing angles and most accurate color reproduction.
+
+Common Applications
+• Consumer Electronics: Televisions, computer monitors, laptops, smartphones, and digital cameras.
+• Embedded & Prototyping Projects: Small character modules (e.g., 16x2 LCD screens paired with microcontrollers like Arduino) used to display sensor readings, status codes, or menu interfaces.
+• Automotive & Aviation: Instrument clusters, GPS units, and aircraft cockpit displays.
+• Public & Industrial Signage: Digital clocks, calculators, POS terminals, and outdoor/indoor information boards.
